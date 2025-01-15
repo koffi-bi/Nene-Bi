@@ -1,0 +1,249 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    background-color: #fff7ff;
+}
+
+.dashboard {
+    display: flex;
+    width: 100%;
+}
+
+
+.sidebar .logo img {
+    
+    position: relative;
+    width: 118%;
+
+    background-color: #fff;
+    bottom: 20px;
+    right: 20px;
+
+    
+
+}
+
+ 
+
+   hr{
+    opacity: 0.4;
+   }
+
+   .hr{
+    position: relative;
+    top: 100px;
+     
+
+   }
+
+
+/* Contenu principal */
+.main-content {
+    width: 80%;
+    padding: 7px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0px;
+}
+
+h1{
+    font-size: 28px;
+    color: #7B01F6;
+    font-weight: normal;
+}
+.user-icon{
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.stat-item {
+    text-align: center;
+    background: #E701F6;
+    color: #fff;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 50px;
+    width: 15%;
+    box-shadow:2px 5px #e9e7e7;
+}
+
+.stat-item i {
+    font-size: 46px;
+    margin-bottom: 20px;
+    
+}
+p{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.chart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 80px;
+    margin: 0 150px;
+    border: 1px solid rgb(236, 227, 227);
+    box-shadow: #e9e7e7;
+    border-radius: 10px;
+    border-left:none;
+   
+   
+   
+}
+
+.donut-chart {
+    width: 200px;
+    height: 150px;
+    border-radius: 50%;
+    background: conic-gradient(#E701F6 40%,  #f2b5f7 40% 70%, #7B01F7 70%);
+}
+
+.chart-legend {
+    list-style: none;
+}
+
+.chart-legend li {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.chart-legend .rose {
+   color: #E701F6;
+   font-weight: bold;
+}
+.chart-legend .rose-1 {
+    color:  #f2b5f7;
+    font-weight: bold;
+ }
+ .chart-legend .viollet {
+    color: #7B01F7;
+    font-weight: bold;
+ }
+
+
+.chart-legend .color {
+    width: 50px;
+    height: 50px;
+    margin-right: 30px;
+    
+    
+
+}
+
+.color.en-cours {
+    background-color: #E701F7;
+
+   
+
+}
+
+.color.arriver {
+    background-color: #f2b5f7;
+    
+}
+
+.color.disponible {
+    background-color: #7B01F7;
+   
+}
+
+/*menu deroulant*/
+
+/* Conteneur principal du menu latéral */
+.sidebar {
+    background-color: #7B01F7; /* Couleur de fond principale */
+    padding: 20px;
+    width: 250px;
+    min-height: 100vh; /* Prend toute la hauteur de l'écran */
+    color: #fff;
+}
+
+.sidebar ul {
+    list-style: none; /* Supprime les puces des listes */
+    padding: 0;
+    margin: 0;
+}
+
+/* Style des items du menu principal */
+.sidebar ul li {
+    position: relative; /* Nécessaire pour positionner les éléments liés */
+    margin-bottom: 20px;
+}
+
+/* Style des liens principaux */
+.sidebar ul li a {
+    display: flex; /* Utilise Flexbox pour aligner le texte et les icônes */
+    align-items: center; /* Centre verticalement */
+    justify-content: space-between; /* Place le texte à gauche et l'icône à droite */
+    text-decoration: none; /* Supprime le soulignement */
+    color: #fff; /* Couleur du texte */
+    background-color: #7B01F7; /* Fond des liens */
+    padding: 10px 15px; /* Espacement interne */
+    border-radius: 5px; /* Coins arrondis */
+    transition: background-color 0.3s ease; /* Animation au survol */
+}
+
+/* Style au survol des liens principaux */
+.sidebar ul li a:hover {
+    background-color: #E701F6; /* Couleur lors du survol */
+}
+
+/* Style des flèches à droite */
+.sidebar ul li a .arrow {
+    font-size: 12px; /* Taille de l'icône */
+    color: #fff; /* Couleur par défaut */
+    transition: transform 0.3s ease; /* Animation lors de l'ouverture/fermeture */
+}
+
+/* Sous-menu masqué par défaut */
+.sidebar .submenu {
+    max-height: 0; /* Cache le contenu */
+    overflow: hidden; /* Empêche le dépassement */
+    list-style: none;
+    padding-left: 20px; /* Décalage pour différencier les sous-menus */
+    margin-top: 5px; /* Espace au-dessus du sous-menu */
+    transition: max-height 0.3s ease; /* Transition fluide pour l'ouverture/fermeture */
+}
+
+/* Style des liens dans le sous-menu */
+.sidebar .submenu li a {
+    font-size: 14px; /* Taille de police réduite */
+    padding: 8px 10px; /* Espacement interne réduit */
+    background-color: #6a168c; /* Fond légèrement différent */
+    border-radius: 5px; /* Coins arrondis */
+    text-decoration: none; /* Supprime le soulignement */
+    color: #fff;
+}
+
+/* Style au survol des sous-menus */
+.sidebar .submenu li a:hover {
+    background-color: #4c1065; /* Couleur au survol */
+}
+
+/* Quand le sous-menu est ouvert */
+.sidebar ul li.open > .submenu {
+    max-height: 500px; /* Hauteur maximale (suffisamment grande pour le contenu) */
+}
+
+/* Quand le sous-menu est ouvert, pivote la flèche */
+.sidebar ul li.open > a .arrow {
+    transform: rotate(180deg); /* Rotation de 180° */
+}
